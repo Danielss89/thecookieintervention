@@ -1,0 +1,23 @@
+{
+  "name": "OKcookie",
+  "version": "0.1.3",
+  "description": "Tired of having to push 'OK' to cookies on every new website you visit?",
+  "icons": { "128": "icon.png" },
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    { "matches": ["http://*/*"], "js": ["jquery-1.11.0.min.js", "mappy_content_script.js"] }
+  ],
+  "permissions": [
+    "tabs",
+    "http://*.janniks.dk/",
+    "background",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
